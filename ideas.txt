@@ -1,2 +1,12 @@
 1- Creating 3 container in the index.html file
 2-.quoatesContainer + main + footer
+--How about the Images ?
+The background image of the body element will varies
+ depend on the time 
+ if time is <19
+
+the body will have the body .DayTime else will have the  .nightTime
+
+------The Quoates container
+we gonna have 
+
