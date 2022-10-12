@@ -2,3 +2,17 @@
  @import  './partials/variables';
  @import  './partials/mixins';
  @import  './partials/typogprahy';
+
+ body{
+    height: 100vh;
+    background-image: url(/App/assets/mobile/bg-image-daytime.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include tablette{
+       background-image: url(/App/assets/tablet/bg-image-daytime.jpg);
+    }
+    @include desktop{
+       background-image: url(/App/assets/desktop/bg-image-daytime.jpg);
+    }
+ }

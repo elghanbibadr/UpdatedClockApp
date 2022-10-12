@@ -18,13 +18,13 @@ p {
   font-size: 1.2rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
   p {
     font-size: 1.6rem;
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   p {
     font-size: 1.8rem;
   }
@@ -35,7 +35,7 @@ h1 {
   font-weight: 900;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   h1 {
     font-size: 18rem;
   }
@@ -46,7 +46,7 @@ h2 {
   font-weight: 800;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   h2 {
     font-size: 3rem;
   }
@@ -62,7 +62,7 @@ h3 {
   font-weight: 500;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   h3 {
     font-size: 2.6rem;
   }
@@ -72,9 +72,29 @@ h4 {
   font-size: 1.5rem;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
   h4 {
     font-size: 1.8rem;
+  }
+}
+
+body {
+  height: 100vh;
+  background-image: url(/App/assets/mobile/bg-image-daytime.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    background-image: url(/App/assets/tablet/bg-image-daytime.jpg);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-image: url(/App/assets/desktop/bg-image-daytime.jpg);
   }
 }
 /*# sourceMappingURL=main.css.map */
