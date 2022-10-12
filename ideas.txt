@@ -1,0 +1,2 @@
+1- Creating 3 container in the index.html file
+2-.quoatesContainer + main + footer
