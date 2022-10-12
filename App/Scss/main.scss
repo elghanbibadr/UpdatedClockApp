@@ -1,6 +1,4 @@
-
-
-$tablette:500px;
-$desktop:800px;
-
-// Mixins
+@import  './partials/reset';
+ @import  './partials/variables';
+ @import  './partials/mixins';
+ @import  './partials/typogprahy';
