@@ -1,9 +1,52 @@
 
-
-
 // Typography
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 body{
     font-family: 'Inter', sans-serif;
 }
 
+p{
+     font-size:1.2rem ;
+     @include tablette{
+        font-size: 1.6rem;
+     }
+     @include desktop{
+        font-size: 1.8rem;
+     }
+}
+
+h1{
+    font-size: 9rem;
+    font-weight:900;
+    @include desktop{
+        font-size: 18rem;
+    }
+}
+
+h2{
+    font-size: 2rem;
+    font-weight:800;
+    @include desktop{
+        font-size: 3rem;
+    }
+}
+h2,h3{
+    word-spacing: 2px;
+    letter-spacing: 1.3px;
+}
+h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+  @include desktop{
+    font-size:2.6rem ;
+  }
+}
+
+h4{
+    font-size: 1.5rem;
+    @include desktop{
+        font-size: 1.8rem;
+    }
+}
