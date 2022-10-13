@@ -1,0 +1,20 @@
+header{
+    display: flex;
+    align-items: center;
+}
+.quotesContainer{
+    p{
+        color: white !important;
+    }
+}
+
+.quote__text,.quote__author{
+    color: white !important;
+    line-height: 2;
+    max-width: 50ch;
+}
+
+.quote__refresh{
+    transform: translate(1rem,-2rem);
+    cursor: pointer;
+}

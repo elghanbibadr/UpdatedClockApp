@@ -1,23 +1,14 @@
-import {a} from './Quoates.js';
-import { sum } from './Quoates.js';
+ import {generateQuote,QuoateContainer} from './Quoates.js';
 const apikey = "3265874a2c77ae4a04bb96236a642d2f";
-
-
-// const url = (city) => `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`;
-
-
-let Quoates="https://api.quotable.io/random";
 let timeApi="https://worldtimeapi.org/api/ip/";
- async function getData(url){
-  let res= await fetch(url);
-  let data=await res.json();
-  console.log(data)
- }
 
-    
-console.log(getData(Quoates))
-
-console.log(a)
+// Generate a Quoates each time the browser got refreshed our when visiting the page at the first time
+ generateQuote();
+ 
+// let's Generate a new quote for the user when he choice to generate another one
+ QuoateContainer.addEventListener('click',(e)=>{
+    (e.target.className==="quote__refresh") ? generateQuote():"";
+ })
 
 
-console.log(sum(2,9))
+
