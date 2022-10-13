@@ -272,4 +272,8 @@ main, header {
     padding-left: 10rem;
   }
 }
+
+.hidden {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */
