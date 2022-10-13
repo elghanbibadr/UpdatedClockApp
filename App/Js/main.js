@@ -1,5 +1,6 @@
  import {generateQuote,QuoateContainer} from './Quoates.js';
 let timeApi="https://worldtimeapi.org/api/ip/";
+let main=document.querySelector('main');
 
 // Generate a Quoates each time the browser got refreshed our when visiting the page at the first time
  generateQuote();
@@ -16,6 +17,7 @@ let timeApi="https://worldtimeapi.org/api/ip/";
         let res= await fetch(timeApi);
         let data=await res.json();
        console.log(data)
+    //    
 } 
 
 getTimeAndCountry()

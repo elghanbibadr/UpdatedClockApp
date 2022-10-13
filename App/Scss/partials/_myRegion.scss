@@ -54,4 +54,42 @@
         }
     }
 
+    // region date info
+    &__date{
+         padding: 2rem 3rem;
+         display: grid;
+         grid-template-columns: 1fr ;
+        color: rgba(48, 48, 48, 0.637);
+        backdrop-filter: blur(1rem);
+        background-color: rgba(255, 255, 255, 0.65);
+        h2{
+            color:rgba(48, 48,48,1) ;
+            @include desktop{
+                margin-top: 1rem;
+            }
+        }
+        h4{
+            font-weight: 300;
+            font-size: 1.2rem;
+            @include desktop{
+                font-size: 1.7rem;
+            }
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+            margin-block:0.8rem;
+            @include desktop{
+                flex-direction: column;
+                margin-bottom:2.5rem;
+            }
+        }
+        @include desktop{
+           grid-template-columns: 1fr 1fr;
+        //    justify-items: center;
+           padding-block: 4rem;
+           padding-left: 10rem;
+        }
+    }
+
 }

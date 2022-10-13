@@ -180,8 +180,69 @@ header {
   }
 }
 
+.myRegion__date {
+  padding: 2rem 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  color: rgba(48, 48, 48, 0.637);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.myRegion__date h2 {
+  color: #303030;
+}
+
+@media screen and (min-width: 800px) {
+  .myRegion__date h2 {
+    margin-top: 1rem;
+  }
+}
+
+.myRegion__date h4 {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 800px) {
+  .myRegion__date h4 {
+    font-size: 1.7rem;
+  }
+}
+
+.myRegion__date .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-block: 0.8rem;
+}
+
+@media screen and (min-width: 800px) {
+  .myRegion__date .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .myRegion__date {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    padding-block: 4rem;
+    padding-left: 10rem;
+  }
+}
+
 body {
-  padding: 2.5rem 3rem;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(/App/assets/mobile/bg-image-daytime.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/App/assets/mobile/bg-image-daytime.jpg);
   background-repeat: no-repeat;
@@ -197,9 +258,18 @@ body {
 
 @media screen and (min-width: 800px) {
   body {
-    padding-left: 10rem;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(/App/assets/desktop/bg-image-daytime.jpg);
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/App/assets/desktop/bg-image-daytime.jpg);
+  }
+}
+
+main, header {
+  padding: 2.5rem 3rem;
+}
+
+@media screen and (min-width: 800px) {
+  main, header {
+    padding-left: 10rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
