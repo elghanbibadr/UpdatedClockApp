@@ -1,0 +1,57 @@
+.myRegion{
+    margin-top: 12rem !important;
+    color: white;
+    position: relative;
+
+    &__dayPeriod,&__timeContainer{
+        display: flex;
+        img{
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__timeContainer{
+        align-items: center;
+        span{
+            transform: translateY(3rem);
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-left: 0.3rem;
+        }
+    }
+    &__more{
+        display:flex;
+        background-color: white;
+        margin-top: 8rem;
+        display: inline-flex;
+        color:rgba(48, 48, 48, 0.637) ;
+        justify-content: space-between;
+        align-items: center;
+        height: 36px;
+        width: 110px;
+         padding: 4px;
+        border-radius: 30px;
+        p{
+            text-transform: uppercase;
+            margin-left:10px;
+            font-weight: 600;
+            letter-spacing: 1.8px;
+            font-size: 1.3rem;
+        }
+        cursor: pointer;
+        img{
+            height: 100%;
+            transform: rotate(180deg);
+            
+        }
+
+        @include desktop{
+          position: absolute;
+        //   left: -70%;
+        height: 50px;
+        left: 70%;
+        top: 50%;
+        }
+    }
+
+}

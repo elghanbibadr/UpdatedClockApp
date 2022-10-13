@@ -3,10 +3,11 @@
  @import  './partials/mixins';
  @import  './partials/typogprahy';
  @import './partials/header';
+ @import './partials/myRegion';
 
  body{
-    height: 100vh;
-    padding: 2rem;
+   //  height: 100vh;
+    padding: 2.5rem 3rem;
     background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/App/assets/mobile/bg-image-daytime.jpg);
     background-repeat: no-repeat;
       background-size: cover;
@@ -14,6 +15,7 @@
        background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/App/assets/tablet/bg-image-daytime.jpg);
     }
     @include desktop{
+      padding-left: 10rem;
        background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/App/assets/desktop/bg-image-daytime.jpg);
     }
  }
