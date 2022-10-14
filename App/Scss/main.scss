@@ -7,14 +7,12 @@
 
  body{
    //  padding: 2.5rem 3rem;
-    background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/App/assets/mobile/bg-image-daytime.jpg);
-    background-repeat: no-repeat;
+    background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/App/assets/mobile/bg-image-daytime.jpg) ;
       background-size: cover;
     @include tablette{
-       background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/App/assets/tablet/bg-image-daytime.jpg);
+      background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/App/assets/tablet/bg-image-daytime.jpg);
     }
     @include desktop{
-      // padding-left: 10rem;
        background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/App/assets/desktop/bg-image-daytime.jpg);
     }
  }
@@ -29,4 +27,7 @@ main,header{
 
 .hidden{
    display: none;
+}
+.rotateIcon{
+transform: rotate(180deg);
 }

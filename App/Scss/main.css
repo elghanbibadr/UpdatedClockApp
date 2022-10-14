@@ -135,25 +135,25 @@ header {
 }
 
 .myRegion__more {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: white;
-  margin-top: 8rem;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  color: rgba(48, 48, 48, 0.637);
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding: 4px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 36px;
-  width: 110px;
-  padding: 4px;
+  background-color: white;
   border-radius: 30px;
+  color: rgba(48, 48, 48, 0.637);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 36px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 8rem;
+  width: 110px;
   cursor: pointer;
 }
 
@@ -163,12 +163,14 @@ header {
   font-weight: 600;
   letter-spacing: 1.8px;
   font-size: 1.3rem;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .myRegion__more img {
   height: 100%;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 
 @media screen and (min-width: 800px) {
@@ -181,15 +183,15 @@ header {
 }
 
 .myRegion__date {
-  padding: 2rem 3rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  color: rgba(48, 48, 48, 0.637);
+  padding: 2rem 3rem;
   -webkit-backdrop-filter: blur(1rem);
           backdrop-filter: blur(1rem);
   background-color: rgba(255, 255, 255, 0.65);
+  color: rgba(48, 48, 48, 0.637);
 }
 
 .myRegion__date h2 {
@@ -245,7 +247,6 @@ header {
 body {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(/App/assets/mobile/bg-image-daytime.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/App/assets/mobile/bg-image-daytime.jpg);
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -275,5 +276,10 @@ main, header {
 
 .hidden {
   display: none;
+}
+
+.rotateIcon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 /*# sourceMappingURL=main.css.map */

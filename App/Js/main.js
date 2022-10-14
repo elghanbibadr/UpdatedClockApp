@@ -16,7 +16,7 @@ let footer=document.querySelector('footer');
  async function getTimeAndCountry(){
         let res= await fetch(timeApi);
         let data=await res.json();
-       console.log(data)
+    //    console.log(data)
 
     //    append the data by the main element
     let {abbreviation,datetime,day_of_week,day_of_year,timezone,week_number}=data;
@@ -72,4 +72,13 @@ footer.innerHTML=`
 `
 } 
 
-getTimeAndCountry()
+getTimeAndCountry();
+// lets attache an event listener to the more button icon
+ main.addEventListener('click',(e)=>{
+    if (e.target.classList.contains('more-icon')){
+        let footer=document.body.querySelector("footer");
+        e.target.classList.toggle('rotateIcon');
+        footer.classList.toggle('hidden');
+    }
+ })
+
