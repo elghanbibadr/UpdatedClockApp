@@ -247,6 +247,10 @@ header {
 body {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(/App/assets/mobile/bg-image-daytime.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/App/assets/mobile/bg-image-daytime.jpg);
+  background-repeat: no-repeat;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-size: cover;
 }
 

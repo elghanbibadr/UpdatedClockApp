@@ -11,24 +11,25 @@ let footer=document.querySelector('footer');
  })
 
 //  =====> timeApi
-// let hour,minute;
 // lets get data from the time Api
  async function getTimeAndCountry(){
         let res= await fetch(timeApi);
         let data=await res.json();
-    //    console.log(data)
 
     //    append the data by the main element
     let {abbreviation,datetime,day_of_week,day_of_year,timezone,week_number}=data;
     let currentTime=new Date(datetime).toLocaleTimeString();
     let [hour,minute]=currentTime.split(':');
+
+    // greet function to check wheter what greeting message to says depeneding on the hour
     function greet(){
         return hour <1 ? 'MORNING':hour>=1 ? 'AFTERNOON' :hour>=6 ? 'EVENING ':'NIGHT';
     }
+    // which logo to show depend on the current hour
     function timeLogo(){
        return hour > 8 ? 'moon' :'sun';
     }
-    console.log(hour,minute);
+
     main.innerHTML=`
     <div class="myRegion">
     <div class="myRegion__timeZone">
@@ -85,6 +86,11 @@ getTimeAndCountry();
         let footer=document.body.querySelector("footer");
         e.target.classList.toggle('rotateIcon');
         footer.classList.toggle('hidden');
+
+     // changing the value of the neighbor of the arrow icon depeneding on the arrow direction
+      let neighbor= e.target.previousElementSibling;
+      neighbor.textContent=e.target.classList.contains('rotateIcon') ? 'LESS':'MORE';
+         
     }
  })
 
