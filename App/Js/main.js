@@ -11,7 +11,7 @@ let footer=document.querySelector('footer');
  })
 
 //  =====> timeApi
-
+// let hour,minute;
 // lets get data from the time Api
  async function getTimeAndCountry(){
         let res= await fetch(timeApi);
@@ -21,14 +21,20 @@ let footer=document.querySelector('footer');
     //    append the data by the main element
     let {abbreviation,datetime,day_of_week,day_of_year,timezone,week_number}=data;
     let currentTime=new Date(datetime).toLocaleTimeString();
-     let [hour,minute]=currentTime.split(':');
-     console.log(hour,minute)
+    let [hour,minute]=currentTime.split(':');
+    function greet(){
+        return hour <1 ? 'MORNING':hour>=1 ? 'AFTERNOON' :hour>=6 ? 'EVENING ':'NIGHT';
+    }
+    function timeLogo(){
+       return hour > 8 ? 'moon' :'sun';
+    }
+    console.log(hour,minute);
     main.innerHTML=`
     <div class="myRegion">
     <div class="myRegion__timeZone">
      <div class="myRegion__dayPeriod">
-        <img src="/App/assets/desktop/icon-sun.svg">
-        <h3>GOOD MORNING</h3>
+        <img src="/App/assets/desktop/icon-${timeLogo()}.svg">
+        <h3>GOOD ${greet()}</h3>
      </div>
      <div class="myRegion__timeContainer">
          <h1 class="myRegion__time">
